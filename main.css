@@ -8,27 +8,35 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,#153677, #4e085f);
+    background:url(/img/1.jpg);
     padding: 10px;
+    background-size: cover;
+    background-position: center;
 }
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background: #fff;
+   /* background: #fff;*/
     margin: 100px auto 20px;
     padding:40px 30px 70px;
     border-radius:10px;
+    backdrop-filter: blur(40px);
+    
 }
 .todo-app h2{
-    color: #002765;
+    color: gray;
+    font-size:30px;
+    text-shadow: #fff;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    text-shadow: 2px 5px 5px white;
 
 }
-.todo-app h2 img{
-    width: 30px;
+.todo-app h2 i{
+    width: 20px;
     margin-left:10px; 
+   
 
 }
 .row{
@@ -48,16 +56,23 @@ input{
     padding: 10px;
     font-weight: 14px;
 }
+
 button{
     border: none;
     outline: none;
     padding:16px 50px;
-    background: #ff5945;
+    background: gray;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+   box-shadow: 2px 2px 50px white;
 }
+button:hover{
+    background: #fff;
+    color: gray;
+}
+
 ul li{
     list-style: none;
     font-size: 17px;
@@ -65,6 +80,10 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    color: #6a6a6a;
+}
+ul li:hover{
+    color: white;
 }
 ul li::before{
     content: '';
@@ -75,7 +94,7 @@ ul li::before{
     background-image: url(img/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
+    top: 7px;
     left:8px;
 }
 ul li.checked{
@@ -92,11 +111,17 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: gray;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+  
+   
 }
 ul li span:hover{
     background: #edeef0;
+}
+ul li span:first-child {
+    right: 45px;
+     /* İlk span'ı sağdan 45px uzaklaştırarak, düzenleme ikonunu çöp kutusunun soluna koyar */
 }
