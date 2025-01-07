@@ -71,6 +71,8 @@ button{
 button:hover{
     background: #fff;
     color: gray;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 ul li{
@@ -84,6 +86,8 @@ ul li{
 }
 ul li:hover{
     color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 ul li::before{
     content: '';
@@ -120,6 +124,8 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 ul li span:first-child {
     right: 45px;
